@@ -1,0 +1,12 @@
+class Main {
+	public static void main(String[] args) {
+		String str = "madam";
+		StringBuffer sb = new StringBuffer(str);
+		String reversed =sb.reverse().toString();
+		if (str.equals(reversed)) {
+			System.out.println(str + "-> Palindrome");
+		} else {
+			System.out.println(str + "-> Not Palindrome");
+		}
+	}
+}
