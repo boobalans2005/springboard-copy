@@ -1,0 +1,17 @@
+class Parent{
+    void NOO(){
+        System.out.print("boo");
+    }
+}
+class Son extends Parent{
+    void Display(){
+        super.NOO();
+        System.out.print("balan");
+    }
+}
+class Main{
+    public static void main(String []args){
+        Son a=new Son();
+        a.Display();
+    }
+}
