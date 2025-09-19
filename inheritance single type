@@ -1,0 +1,23 @@
+class Raju{
+    void land(){
+        System.out.println("owner of 10 acer but my son:");
+    }
+}
+class Madhan extends Raju{
+    void type(){
+        System.out.println("very intellegent");
+    }
+}
+class Raju2 extends Madhan{
+    void nickname(){
+        System.out.println("nick name:virumaandi");
+    }
+}
+class Main{
+    public static void main(String[]args){
+        Raju2 c=new Raju2();
+        c.land();
+        c.type();
+        c.nickname();
+    }
+}
