@@ -1,0 +1,19 @@
+class AgeException extends Exception {
+}
+    public class Main {
+		static void checkAge (int age) throws AgeException {
+			if (age< 18) {
+				throw new AgeException();
+			} else {
+				System.out.println(" Elegible to vote");
+			}
+		}
+		public static void main(String [] args) {
+			try {
+				int age =15;
+				checkAge (age);
+			} catch(AgeException e) {
+				System.out.println("Not eligible to vote");
+			} 
+		}
+	}
