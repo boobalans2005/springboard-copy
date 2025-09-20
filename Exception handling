@@ -1,0 +1,13 @@
+public class Main {
+	public static void main(String[] args) {
+		int arr[] = {10, 20, 30};
+		try {
+			System.out.println(arr[4]);
+		} catch (Exception e) {
+			System.out.println("Invalid array index");
+		} finally {
+			System.out.println("Finally Always executed.");
+		}
+		System.out.println("Program continues");
+	}
+}
