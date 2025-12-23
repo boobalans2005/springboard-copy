@@ -1,0 +1,29 @@
+import java.util.Scanner;
+ class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first dollar: ");
+        int i1 = sc.nextInt();
+
+        System.out.print("Enter first cent: ");
+        int i2 = sc.nextInt();
+
+        System.out.print("Enter second dollar: ");
+        int i3 = sc.nextInt();
+
+        System.out.print("Enter second cent: ");
+        int i4 = sc.nextInt();
+
+        int totalDollar = i1 + i3;
+        int totalCent = i2 + i4;
+
+        if (totalCent >= 100) {
+            totalDollar += totalCent / 100; 
+            totalCent = totalCent % 100;    
+        }
+
+        System.out.println("Total Amount: " + totalDollar + " dollars and " + totalCent + " cents");
+    }
+}
