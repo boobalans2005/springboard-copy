@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a num1");
+        int num1=sc.nextInt();
+        System.out.println("Enter a num2");
+        int num2=sc.nextInt();
+        System.out.println("destination(3,4)");
+        System.out.println("total distance:");
+        double dx = (3-num1);
+        double dy=(4-num2);
+        double distance=Math.sqrt((dx*dx)+(dy*dy));
+        System.out.println(distance);
+    }
+}
