@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a num1");
+        int num1=sc.nextInt();
+        System.out.println("Enter a num2");
+        int num2=sc.nextInt();
+        System.out.println("Enter a num3");
+        int num3=sc.nextInt();
+        System.out.println("Enter a num4");
+        int num4=sc.nextInt();
+        float a=(num1+num3)/2.0f;
+        float b=(num2+num4)/2.0f;
+         System.out.println("value of a");
+        System.out.println(a);
+        System.out.println("value of b");
+        System.out.println(b);
+    }
+}
