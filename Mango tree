@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a num1");
+        int num1=sc.nextInt();
+        System.out.println("Enter a num2");
+        int num2=sc.nextInt();
+        System.out.println("Enter a m");
+        int m=sc.nextInt();
+       if (m > num1*num2){
+           System.out.println("Invalid");
+       }
+       else{
+           if (m<=num1 || m%num1==1 || m%num1==0){
+               System.out.println("mango tree");
+           }
+           else{
+               System.out.println("not a mango tree");
+           }
+       }
+  }
+}
