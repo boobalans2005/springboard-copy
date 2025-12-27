@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		System.out.print("Enter the accno:");
+		long accNo = sc.nextLong();
+		System.out.print("Enter the accType:");
+		int accType = sc.nextInt();
+		System.out.print("Enter the balance:");
+		long balance = sc.nextLong();
+		System.out.print("Enter the tType:");
+		int tType = sc.nextInt();
+		System.out.print("Enter the Tamount:");
+		int Tamount = sc.nextInt();
+
+		if(accNo <=9999999 && accNo >=1000000) {
+			if(accType ==1) {
+				if(tType==1) {
+					if(balance -(Tamount+10)>=1000) {
+						balance = balance-(Tamount +10);
+					} else {
+						System.out.println("Insufficient Minimum balance");
+					}
+				}
+				if(tType==2) {
+					if(Tamount%100 == 0) {
+						int percent = (15*Tamount)/100;
+						balance = balance+(percent-Tamount);
+					} else {
+						System.out.println("Deposit amount not as 100's");
+					}
+				}
+			}
+			if(accType==2) {
+				if(tType==1) {
+					if(balance -(Tamount+25)>=5000) {
+						balance = balance-(Tamount +25);
+					} else {
+						System.out.println("Insufficient Minimum balance");
+					}
+
+				}
+				if(tType==2) {
+					if(Tamount%100 == 0) {
+						int percent = (15/Tamount)*100;
+						balance = balance+(percent-Tamount);
+					} else {
+						System.out.println("Deposit amount not as 100's");
+					}
+				}
+			}
+		}
+		System.out.println((double)balance);
+		
+	}
+}
