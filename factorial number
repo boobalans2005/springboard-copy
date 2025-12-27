@@ -1,0 +1,80 @@
+// /******************************************************************************
+
+//                             Online Java Compiler.
+//                 Code, Compile, Run and Debug java program online.
+// Write your code in this editor and press "Run" button to execute it.
+
+// *******************************************************************************/
+
+// public class Main
+// {
+// 	public static void main(String[] args) {
+// 		System.out.println("Hello World");
+// 	}
+// }
+
+
+// import java.util.Scanner;
+
+// public class FactorialNumber {
+    
+//     static int factorial(int n) {
+//         int fact = 1;
+//         for (int i = 1; i <= n; i++) {
+//             fact *= i;
+//         }
+//         return fact;
+//     }
+
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter number: ");
+//         int num = sc.nextInt();
+
+//         int temp = num;
+//         int sum = 0;
+
+//         while (temp > 0) {
+//             int digit = temp % 10;
+//             sum += factorial(digit);
+//             temp /= 10;
+//         }
+
+//         if (sum == num) {
+//             System.out.println(num + " is a Krishnamurthy number");
+//         } else {
+//             System.out.println(num + " is not a Krishnamurthy number");
+//         }
+//     }
+// }
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		int n = sc.nextInt();
+		int ogn = n;
+		int sum=0;
+		while(n!=0){
+		    int fact=1;
+		    int temp = n%10;
+		    if(temp==0){
+		        n=n/10;
+		    }else{
+		        for(int i=1;i<=temp;i++){
+		            fact = fact*i;
+		        }
+		        sum = sum+fact;
+		        n=n/10;
+		    }
+		}
+		if(ogn==sum){
+		    System.out.println("Fact Num");
+		}else{
+		    System.out.println("Not a Fact Num");
+		}
+	}
+}
