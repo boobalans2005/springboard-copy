@@ -1,0 +1,35 @@
+import java.util.*;
+class Main {
+	public static void main(String[]args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Groups:");
+		int group=sc.nextInt();
+		System.out.println("Enter the capacity:");
+        int capacity=sc.nextInt();
+
+		int members[]=new int [group];
+		for(int i=0; i<group; i++) {
+		    System.out.println("Enter the person count:");
+			members[i]=sc.nextInt();
+		}
+		for(int i=0; i<group; i++) {
+			if (members[i] >capacity) {
+				System.out.println("Invalid group");
+				return;
+			}
+		}
+		int bus= 1, sum=0;
+		for(int i = 0; i<group; i++) {
+			if(sum +members [i] <=capacity) {
+				sum+=members[i];
+			}
+			else {
+				sum=members[i];
+				bus++;
+			}
+		}
+		System.out.println("total bus count:"+bus);
+
+
+	}
+}
