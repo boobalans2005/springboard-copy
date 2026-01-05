@@ -1,0 +1,25 @@
+class Solution {
+    public int sumFourDivisors(int[] nums) {
+        int result = 0;
+        for (int x : nums) {
+            int count = 2;
+            int sum = 1 + x;
+            for (int i = 2; i * i <= x; i++) {
+                if (x % i == 0) {
+                    if (i * i == x) {
+                        count++;
+                        sum += i;
+                    } else {
+                        count += 2;
+                        sum += i + x / i;
+                    }
+                }
+                if (count > 4) break;
+            }
+            if (count == 4) {
+                result += sum;
+            }
+        }
+        return result;
+    }
+}
